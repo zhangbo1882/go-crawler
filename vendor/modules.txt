@@ -1,0 +1,59 @@
+# github.com/PuerkitoBio/goquery v1.7.1
+## explicit
+github.com/PuerkitoBio/goquery
+# github.com/andybalholm/cascadia v1.2.0
+github.com/andybalholm/cascadia
+# github.com/antchfx/htmlquery v1.2.3
+## explicit
+# github.com/antchfx/xmlquery v1.3.6
+## explicit
+# github.com/benbjohnson/phantomjs v0.0.0-20181211182228-6499a20f5cd6
+## explicit
+# github.com/cespare/xxhash/v2 v2.1.1
+github.com/cespare/xxhash/v2
+# github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f
+github.com/dgryski/go-rendezvous
+# github.com/go-logr/logr v0.4.0
+github.com/go-logr/logr
+# github.com/go-redis/redis v6.15.9+incompatible
+## explicit
+# github.com/go-redis/redis/v8 v8.11.2
+## explicit
+github.com/go-redis/redis/v8
+github.com/go-redis/redis/v8/internal
+github.com/go-redis/redis/v8/internal/hashtag
+github.com/go-redis/redis/v8/internal/hscan
+github.com/go-redis/redis/v8/internal/pool
+github.com/go-redis/redis/v8/internal/proto
+github.com/go-redis/redis/v8/internal/rand
+github.com/go-redis/redis/v8/internal/util
+# github.com/gobwas/glob v0.2.3
+## explicit
+# github.com/gocolly/colly v1.2.0
+## explicit
+# github.com/gocolly/colly/v2 v2.1.0
+## explicit
+# github.com/golang/glog v0.0.0-20210429001901-424d2337a529
+## explicit
+# github.com/kennygrant/sanitize v1.2.4
+## explicit
+# github.com/oliveagle/jsonpath v0.0.0-20180606110733-2e52cf6e6852
+## explicit
+github.com/oliveagle/jsonpath
+# github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca
+## explicit
+# github.com/tebeka/selenium v0.9.9
+## explicit
+# github.com/temoto/robotstxt v1.1.2
+## explicit
+# golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d
+## explicit
+golang.org/x/net/html
+golang.org/x/net/html/atom
+# google.golang.org/appengine v1.6.7
+## explicit
+# k8s.io/klog v1.0.0
+## explicit
+# k8s.io/klog/v2 v2.10.0
+## explicit
+k8s.io/klog/v2
