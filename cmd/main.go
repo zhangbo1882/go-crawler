@@ -90,7 +90,8 @@ func (s *ItemConfig) Goquery(index int) {
 	}
 	doc, err := goquery.NewDocument(url)
 	if err != nil {
-		klog.Fatalf("Goquery new document fails")
+		klog.Errorf("Goquery new document fails")
+		return
 	}
 	klog.Infof("Begin to visting %s", url)
 	err = s.Parse(doc, index)
@@ -141,7 +142,7 @@ func (s *ItemConfig) Parse(doc *goquery.Document, index int) error {
 	if index == 0 {
 		pageNumber, err := jsonpath.JsonPathLookup(f, "$.jss.sitecore.route.placeholders.arrow-main[2].placeholders.plp-details[0].placeholders.product-line-search[0].fields.firstBeSearchResults.resultsMetadata.totalPageCount")
 		if err != nil {
-			klog.Fatalf("Json path lookup fails, err: %v", err)
+			return klog.Errorf("Json path lookup fails, err: %v", err)
 		}
 		pages := i2f(pageNumber)
 		klog.Infof("pageNumber: %v", pages)
@@ -179,13 +180,10 @@ func (s *ItemConfig) Parse(doc *goquery.Document, index int) error {
 			item.Category = i2s(category)
 			item.Manufacturer = i2s(manufacturer)
 			item.Price = i2s(price)
-			s.lock.Lock()
-			//	s.items = append(s.items, item)
 			err := s.client.SAdd(*s.ctx, item.Category, item.Id).Err()
 			klog.V(6).Infof("Add id to category %s, err: %v", item.Category, err)
 			err = s.client.SAdd(*s.ctx, item.Id, item).Err()
 			klog.V(6).Infof("Update id %s, err: %v", item.Id, err)
-			s.lock.Unlock()
 		}
 	}
 	if index == 0 {
