@@ -73,7 +73,7 @@ func startDebugHttpServer() {
 
 func init() {
 	klog.InitFlags(nil)
-	//	flag.Set("logtostderr", "false")
+	flag.Set("logtostderr", "false")
 	flag.Set("log_file", "crawler.log")
 	flag.Set("v", "2")
 	flag.Parse()
