@@ -259,7 +259,7 @@ func (s *Spider) GetURL() {
 func main() {
 	spider := Spider{}
 	spider.Init()
-	//	spider.GetURL()
+	spider.GetURL()
 	spider.GenerateConfig()
 	spider.Start()
 }
